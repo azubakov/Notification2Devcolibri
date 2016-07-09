@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
@@ -42,11 +43,25 @@ public class MainActivity extends AppCompatActivity {
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)
                 .setContentTitle("Uvedomlenie")
-                .setContentText("Press to know the secret");
+                .setContentText("Press to know the secret")
+                .setProgress(100, 20, true);
 
         Notification notification = builder.build();
+        //notification.defaults = Notification.DEFAULT_ALL;
+        notification.defaults = Notification.DEFAULT_SOUND;
+        //notification.sound = Uri.parse("android.resource://tomer.edu.notification1devcolibri/" + R.raw.my_sound);
+
+        //long[] vibrate = new long[]{1500, 1000, 1500, 1000};
+        //notification.vibrate =vibrate;
+
+        //notification.flags = notification.flags | Notification.FLAG_ONGOING_EVENT;
+        notification.flags = notification.flags | Notification.FLAG_INSISTENT;
 
         nm.notify(NOTIFICATION_ID, notification);
 
      }
+
+    public void CancelNotificstion(View view) {
+        nm.cancel(NOTIFICATION_ID);
+    }
 }

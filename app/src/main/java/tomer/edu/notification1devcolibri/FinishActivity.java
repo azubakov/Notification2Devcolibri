@@ -2,6 +2,7 @@ package tomer.edu.notification1devcolibri;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class FinishActivity extends AppCompatActivity {
 
@@ -10,4 +11,6 @@ public class FinishActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finish);
     }
+
+
 }
