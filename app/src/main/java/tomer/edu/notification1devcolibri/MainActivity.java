@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Notification notification = builder.build();
         //notification.defaults = Notification.DEFAULT_ALL;
         notification.defaults = Notification.DEFAULT_SOUND;
+        //notification.defaults = Notification.DEFAULT_SOUND;
         //notification.sound = Uri.parse("android.resource://tomer.edu.notification1devcolibri/" + R.raw.my_sound);
 
         //long[] vibrate = new long[]{1500, 1000, 1500, 1000};
